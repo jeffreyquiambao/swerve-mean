@@ -1,0 +1,53 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <h1 class=" mat-typography mat-display-3">Swerve</h1>
+</div>
+<div fxLayout="row" fxLayoutAlign="center center">
+  <h3 class=" mat-typography mat-headline">Calculate the cost of your commute!</h3>
+</div>
+<mat-card>
+
+  <mat-card-title>
+    Car and Destination Info
+  </mat-card-title>
+
+<div fxLayout="Row">
+  <div fxFlex="10%">
+  <p>Make:</p>
+  </div>
+  <div>
+      <mat-form-field appearance="outline">
+
+          <input matInput placeholder="eg. Toyota">
+        </mat-form-field>
+  </div>
+</div>
+
+<div fxLayout="Row">
+  <div fxFlex="10%">
+    <p>Model:</p>
+  </div>
+  <div>
+      <mat-form-field appearance="outline">
+
+          <input matInput placeholder="eg. Camry">
+        </mat-form-field>
+  </div>
+</div>
+
+<div fxLayout="Row">
+  <div fxFlex="10%" fxLayoutAlign="start center">
+    <p>Year:</p>
+  </div>
+  <div fxLayoutAlign="end center">
+      <mat-form-field appearance="outline">
+
+          <input matInput placeholder="eg. 2012">
+        </mat-form-field>
+  </div>
+</div>
+
+<div>
+<button mat-button color="primary" fxLayoutAlign="end center">Submit</button>
+</div>
+
+</mat-card>
