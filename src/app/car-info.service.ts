@@ -9,7 +9,8 @@ export class CarInfoService {
   // interacts with the api to grab car data
   constructor(private http: HttpClient) { }
 
-  public getCarInfo(query): Observable<object> {
+  public getCarInfo(query) {
+    console.log('service called!');
     return this.http.get('http://localhost:3000/api/carData/'
     + query.make + '/'
     + query.model + '/'

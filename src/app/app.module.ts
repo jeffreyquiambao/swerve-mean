@@ -6,6 +6,9 @@ import { SwervemainComponent } from './swervemain/swervemain.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSliderModule, MatFormFieldModule, MatCardModule, MatInputModule } from '@angular/material';
 import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatButtonModule} from '@angular/material/button';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +22,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatButtonModule,
+    FormsModule,
     FlexLayoutModule
   ],
   exports: [

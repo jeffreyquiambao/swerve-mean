@@ -17,7 +17,7 @@
   <div>
       <mat-form-field appearance="outline">
 
-          <input matInput placeholder="eg. Toyota">
+          <input [(ngModel)]="make" matInput placeholder="eg. Toyota">
         </mat-form-field>
   </div>
 </div>
@@ -28,8 +28,7 @@
   </div>
   <div>
       <mat-form-field appearance="outline">
-
-          <input matInput placeholder="eg. Camry">
+          <input [(ngModel)]="model" matInput placeholder="eg. Camry">
         </mat-form-field>
   </div>
 </div>
@@ -40,14 +39,37 @@
   </div>
   <div fxLayoutAlign="end center">
       <mat-form-field appearance="outline">
+          <input [(ngModel)]="year" matInput placeholder="eg. 2018">
+        </mat-form-field>
+  </div>
+</div>
 
-          <input matInput placeholder="eg. 2012">
+<div fxLayout="Row">
+  <div fxFlex="10%" fxLayoutAlign="start center">
+    <p>Transmission:</p>
+  </div>
+  <div fxLayoutAlign="end center">
+      <mat-form-field appearance="outline">
+
+          <input [(ngModel)]="trany" matInput placeholder="eg. Automatic (S8)">
+        </mat-form-field>
+  </div>
+</div>
+
+<div fxLayout="Row">
+  <div fxFlex="10%" fxLayoutAlign="start center">
+    <p>Drive:</p>
+  </div>
+  <div fxLayoutAlign="end center">
+      <mat-form-field appearance="outline">
+
+          <input [(ngModel)]="drive" matInput placeholder="eg. Front-Wheel Drive">
         </mat-form-field>
   </div>
 </div>
 
 <div>
-<button mat-button color="primary" fxLayoutAlign="end center">Submit</button>
+<button mat-raised-button color="primary" fxLayoutAlign="end center" (click)="submitCarData()">Submit</button>
 </div>
 
 </mat-card>

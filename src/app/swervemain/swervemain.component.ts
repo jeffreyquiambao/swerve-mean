@@ -23,39 +23,27 @@ export class SwervemainComponent implements OnInit {
 */
   constructor(private carService: CarInfoService) { }
 
-  getCarData() {
-    let query = {
-        make: this.make,
-        model: this.model,
-        year: this.year,
-        trany: this.trany,
-        drive: this.drive,
-      };
-// this change was added
-// yay area
-// this is also new
-// anotha one
-// last change
-// this change was made on the development branch
-// 2nd change made on the development branch
+  submitCarData() {
+    console.log("car data submitted");
+    const query = {
+      make: this.make,
+      model: this.model,
+      year: this.year,
+      trany: this.trany,
+      drive: this.drive,
+    };
 
-    const query2 = { make: 'Toyota',
-      model: 'Camry',
-      year: 2018,
-      trany: 'Automatic (S8)',
-      drive: 'Front-Wheel Drive' };
+    console.log(query);
 
-    this.carService.getCarInfo(query2).subscribe(data => {
-        // do something with the car data
-        console.log('hi');
-        console.log(data);
-    });
-
-    }
+    this.carService.getCarInfo(query).subscribe(data => {
+      // do something with the car data
+      // console.log('bruh');
+       console.log(data) + " bruh";
+  });
+  }
 
 
   ngOnInit() {
-    this.getCarData();
   }
 
 }
